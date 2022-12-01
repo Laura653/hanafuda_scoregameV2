@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>分數：</p>
+    <img id=cardPlace1 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace2 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace3 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace4 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace5 width="70px" src="img/back.jpg" alt=""><br>
+    <img id=cardPlace6 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace7 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace8 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace9 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace10 width="70px" src="img/back.jpg" alt=""><br>
+    <img id=cardPlace11 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace12 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace13 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace14 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace15 width="70px" src="img/back.jpg" alt=""><br>
+    <img id=cardPlace16 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace17 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace18 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace19 width="70px" src="img/back.jpg" alt="">
+    <img id=cardPlace20 width="70px" src="img/back.jpg" alt="">
+    
+
+</head>
+
+<body>
+
+    <script>
+        var mainCard = ["yurui_1", "yurui_2", "yurui_3", "yurui_4", "ume_1", "ume_2", "ume_3", "ume_4", "sakura_1", "sakura_2", "sakura_3", "sakura_4", "fuji_1", "fuji_2", "fuji_3", "fuji_4", "shoubu_1", "shoubu_2", "shoubu_3", "shoubu_4", "botan_1", "botan_2", "botan_3", "botan_4", "hagi_1", "hagi_2", "hagi_3", "hagi_4", "susuki_1", "susuki_2", "susuki_3", "susuki_4", "kiku_1", "kiku_2", "kiku_3", "kiku_4", "kaede_1", "kaede_2", "kaede_3", "kaede_4", "yanagi_1", "yanagi_2", "yanagi_3", "yanagi_4", "aogiri_1", "aogiri_2", "aogiri_3", "aogiri_4"]
+        // console.log(mainCard);
+
+        var mainNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+        // console.log(mainNumber);
+
+        var bookNumber1 = mainNumber[0];
+        // console.log(bookNumber1);
+        var bookNumber2 = mainNumber[1];
+        var bookNumber3 = mainNumber[2];
+        var bookNumber4 = mainNumber[3];
+        var bookNumber5 = mainNumber[4];
+        var bookNumber6 = mainNumber[5];
+        var bookNumber7 = mainNumber[6];
+        var bookNumber8 = mainNumber[7];
+        var bookNumber9 = mainNumber[8];
+        var bookNumber10 = mainNumber[9];
+        var bookNumber11 = mainNumber[10];
+        var bookNumber12 = mainNumber[11];
+        var bookNumber13 = mainNumber[12];
+        var bookNumber14 = mainNumber[13];
+        var bookNumber15 = mainNumber[14];
+        var bookNumber16 = mainNumber[15];
+        var bookNumber17 = mainNumber[16];
+        var bookNumber18 = mainNumber[17];
+        var bookNumber19 = mainNumber[18];
+        var bookNumber20 = mainNumber[19];
+        var bookNumber21 = mainNumber[20];
+        var bookNumber22 = mainNumber[21];
+        var bookNumber23 = mainNumber[22];
+        var bookNumber24 = mainNumber[23];
+        var bookNumber25 = mainNumber[24];
+        var bookNumber26 = mainNumber[25];
+        var bookNumber27 = mainNumber[26];
+        var bookNumber28 = mainNumber[27];
+        var bookNumber29 = mainNumber[28];
+        var bookNumber30 = mainNumber[29];
+        var bookNumber31 = mainNumber[30];
+        var bookNumber32 = mainNumber[31];
+        var bookNumber33 = mainNumber[32];
+        var bookNumber34 = mainNumber[33];
+        var bookNumber35 = mainNumber[34];
+        var bookNumber36 = mainNumber[35];
+        var bookNumber37 = mainNumber[36];
+        var bookNumber38 = mainNumber[37];
+        var bookNumber39 = mainNumber[38];
+        var bookNumber40 = mainNumber[39];
+        var bookNumber41 = mainNumber[40];
+        var bookNumber42 = mainNumber[41];
+        var bookNumber43 = mainNumber[42];
+        var bookNumber44 = mainNumber[43];
+        var bookNumber45 = mainNumber[44];
+        var bookNumber46 = mainNumber[45];
+        var bookNumber47 = mainNumber[46];
+        var bookNumber48 = mainNumber[47];
+
+
+
+
+
+        var arr = [];
+        var json = {};
+        while (arr.length < 20) {
+            var k = Math.round(Math.random() * 48 + 1);
+            if (!json[k]) {
+                json[k] = true;
+                arr.push(k);
+            }
+        }
+        console.log(arr)
+
+        if (arr[0] == 1) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yurui_1.jpg";
+        }
+        if (arr[0] == 2) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yurui_2.jpg";
+        }
+        if (arr[0] == 3) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yurui_3.jpg";
+        }
+        if (arr[0] == 4) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yurui_4.jpg";
+        }
+        if (arr[0] == 5) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/ume_1.jpg";
+        }
+        if (arr[0] == 6) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/ume_2.jpg";
+        }
+        if (arr[0] == 7) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/ume_3.jpg";
+        }
+        if (arr[0] == 8) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/ume_4.jpg";
+        }
+        if (arr[0] == 9) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/sakura_1.jpg";
+        }
+        if (arr[0] == 10) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/sakura_2.jpg";
+        }
+        if (arr[0] == 11) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/sakura_3.jpg";
+        }
+        if (arr[0] == 12) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/sakura_4.jpg";
+        }
+        if (arr[0] == 13) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/fuji_1.jpg";
+        }
+        if (arr[0] == 14) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/fuji_2.jpg";
+        }
+        if (arr[0] == 15) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/fuji_3.jpg";
+        }
+        if (arr[0] == 16) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/fuji_4.jpg";
+        }
+        if (arr[0] == 17) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/shoubu_1.jpg";
+        }
+        if (arr[0] == 18) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/shoubu_2.jpg";
+        }
+        if (arr[0] == 19) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/shoubu_3.jpg";
+        }
+        if (arr[0] == 20) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/shoubu_4.jpg";
+        }
+        if (arr[0] == 21) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/botan_1.jpg";
+        }
+        if (arr[0] == 22) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/botan_2.jpg";
+        }
+        if (arr[0] == 23) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/botan_3.jpg";
+        }
+        if (arr[0] == 24) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/botan_4.jpg";
+        }
+        if (arr[0] == 25) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/hagi_1.jpg";
+        }
+        if (arr[0] == 26) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/hagi_2.jpg";
+        }
+        if (arr[0] == 27) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/hagi_3.jpg";
+        }
+        if (arr[0] == 28) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/hagi_4.jpg";
+        }
+        if (arr[0] == 29) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/susuki_1.jpg";
+        }
+        if (arr[0] == 30) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/susuki_2.jpg";
+        }
+        if (arr[0] == 31) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/susuki_3.jpg";
+        }
+        if (arr[0] == 32) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/susuki_4.jpg";
+        }
+        if (arr[0] == 33) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kiku_1.jpg";
+        }
+        if (arr[0] == 34) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kiku_2.jpg";
+        }
+        if (arr[0] == 35) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kiku_3.jpg";
+        }
+        if (arr[0] == 36) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kiku_4.jpg";
+        }
+        if (arr[0] == 37) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kaede_1.jpg";
+        }
+        if (arr[0] == 38) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kaede_2.jpg";
+        }
+        if (arr[0] == 39) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kaede_3.jpg";
+        }
+        if (arr[0] == 40) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/kaede_4.jpg";
+        }
+        if (arr[0] == 41) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yanagi_1.jpg";
+        }
+        if (arr[0] == 42) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yanagi_2.jpg";
+        }
+        if (arr[0] == 43) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yanagi_3.jpg";
+        }
+        if (arr[0] == 44) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/yanagi_4.jpg";
+        }
+        if (arr[0] == 45) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/aogiri_1.jpg";
+        }
+        if (arr[0] == 46) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/aogiri_2.jpg";
+        }
+        if (arr[0] == 47) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/aogiri_3.jpg";
+        }
+
+        if (arr[0] == 48) {
+            var placeFor = document.getElementById("cardPlace1");
+            placeFor.src = "img/aogiri_4.jpg";
+        }
+
+        if (arr[1] == 1) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yurui_1.jpg";
+        }
+        if (arr[1] == 2) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yurui_2.jpg";
+        }
+        if (arr[1] == 3) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yurui_3.jpg";
+        }
+        if (arr[1] == 4) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yurui_4.jpg";
+        }
+        if (arr[1] == 5) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/ume_1.jpg";
+        }
+        if (arr[1] == 6) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/ume_2.jpg";
+        }
+        if (arr[1] == 7) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/ume_3.jpg";
+        }
+        if (arr[1] == 8) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/ume_4.jpg";
+        }
+        if (arr[1] == 9) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/sakura_1.jpg";
+        }
+        if (arr[1] == 10) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/sakura_2.jpg";
+        }
+        if (arr[1] == 11) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/sakura_3.jpg";
+        }
+        if (arr[1] == 12) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/sakura_4.jpg";
+        }
+        if (arr[1] == 13) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/fuji_1.jpg";
+        }
+        if (arr[1] == 14) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/fuji_2.jpg";
+        }
+        if (arr[1] == 15) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/fuji_3.jpg";
+        }
+        if (arr[1] == 16) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/fuji_4.jpg";
+        }
+        if (arr[1] == 17) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/shoubu_1.jpg";
+        }
+        if (arr[1] == 18) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/shoubu_2.jpg";
+        }
+        if (arr[1] == 19) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/shoubu_3.jpg";
+        }
+        if (arr[1] == 20) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/shoubu_4.jpg";
+        }
+        if (arr[1] == 21) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/botan_1.jpg";
+        }
+        if (arr[1] == 22) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/botan_2.jpg";
+        }
+        if (arr[1] == 23) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/botan_3.jpg";
+        }
+        if (arr[1] == 24) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/botan_4.jpg";
+        }
+        if (arr[1] == 25) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/hagi_1.jpg";
+        }
+        if (arr[1] == 26) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/hagi_2.jpg";
+        }
+        if (arr[1] == 27) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/hagi_3.jpg";
+        }
+        if (arr[1] == 28) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/hagi_4.jpg";
+        }
+        if (arr[1] == 29) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/susuki_1.jpg";
+        }
+        if (arr[1] == 30) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/susuki_2.jpg";
+        }
+        if (arr[1] == 31) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/susuki_3.jpg";
+        }
+        if (arr[1] == 32) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/susuki_4.jpg";
+        }
+        if (arr[1] == 33) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kiku_1.jpg";
+        }
+        if (arr[1] == 34) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kiku_2.jpg";
+        }
+        if (arr[1] == 35) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kiku_3.jpg";
+        }
+        if (arr[1] == 36) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kiku_4.jpg";
+        }
+        if (arr[1] == 37) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kaede_1.jpg";
+        }
+        if (arr[1] == 38) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kaede_2.jpg";
+        }
+        if (arr[1] == 39) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kaede_3.jpg";
+        }
+        if (arr[1] == 40) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/kaede_4.jpg";
+        }
+        if (arr[1] == 41) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yanagi_1.jpg";
+        }
+        if (arr[1] == 42) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yanagi_2.jpg";
+        }
+        if (arr[1] == 43) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yanagi_3.jpg";
+        }
+        if (arr[1] == 44) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/yanagi_4.jpg";
+        }
+        if (arr[1] == 45) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/aogiri_1.jpg";
+        }
+        if (arr[1] == 46) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/aogiri_2.jpg";
+        }
+        if (arr[1] == 47) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/aogiri_3.jpg";
+        }
+
+        if (arr[1] == 48) {
+            var placeFor = document.getElementById("cardPlace2");
+            placeFor.src = "img/aogiri_4.jpg";
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

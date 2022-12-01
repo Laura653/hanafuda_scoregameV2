@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        //json物件,key值是唯一的,key值可以為數字
+        var arr = [];
+        var json = {};
+        while (arr.length < 20) {
+            var k = Math.round(Math.random() * 48+1);
+            if (!json[k]) {
+                json[k] = true;
+                arr.push(k);
+            }
+        }
+        console.log(arr)
+
+
+    </script>
+</body>
+
+</html>

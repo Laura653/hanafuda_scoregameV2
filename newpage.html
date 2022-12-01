@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="_js/jquery-3.6.0.js"></script>
+
+    <link rel="stylesheet" href="newc.css">
+
+</head>
+
+<body>
+
+    <div>
+        <nobr style="font-size: 26px ;font-weight: bold; ">役種介紹</nobr> <a href="test.html">[小測驗按此]</a>
+    </div>
+    <p>花札為日本傳統紙牌遊戲，除了起源於橫濱、盛行於日本全國的八八花之外，其他地區也有類似的牌具，在圖案、牌數略有不同，如下表所列：</p>
+
+
+    <div class="tab">
+        <button class="tablinks" onmouseover="cardintro(event, 'fivehikari')">五光（10分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'four')">四光（8分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'amefour')">雨四光（7分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'san')">三光（5分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'chyo')">豬鹿蝶（5分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'redcard')">赤短（5分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'bluecard')">青短（5分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'tane')">種（1分以上）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'shortc')">短（1分以上）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'kasuc')">雜（1分以上）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'moonwhite')">賞月一浮白（5分）</button>
+        <button class="tablinks" onmouseover="cardintro(event, 'hanawhite')">賞花一浮白（5分）</button>
+    </div>
+
+    <div id="fivehikari" class="tabcontent">
+        <h3>五光</h3>
+        <p>得到全部5張光牌。</p>
+        <img class="imgichi" src="img/yurui_1.png" style="height: 150px" alt="">
+        <img class="imgichi" src="img/sakura_1.png" style="height: 150px" alt="">
+        <img class="imgichi" src="img/susuki_1.png" style="height: 150px" alt="">
+        <img class="imgichi" src="img/aogiri_1.png" style="height: 150px" alt="">
+        <img class="imgichi" src="img/yanagi_1.png" style="height: 150px" alt="">
+    </div>
+
+    <div id="four" class="tabcontent">
+        <h3>四光</h3>
+        <p>得到除「柳に小野道風」以外之其餘4張光牌。</p>
+        <img class="imgni" src="img/yurui_1.png" style="height: 150px" alt="">
+        <img class="imgni" src="img/sakura_1.png" style="height: 150px" alt="">
+        <img class="imgni" src="img/susuki_1.png" style="height: 150px" alt="">
+        <img class="imgni" src="img/aogiri_1.png" style="height: 150px" alt="">
+    </div>
+
+    <div id="amefour" class="tabcontent">
+        <h3>雨四光</h3>
+        <p>得到「柳に小野道風」，並加上任意3張光牌。</p>
+        <img class="imgsan" src="img/yurui_1.png" style="height: 150px" alt="">
+        <img class="imgsan" src="img/sakura_1.png" style="height: 150px" alt="">
+        <img class="imgsan" src="img/susuki_1.png" style="height: 150px" alt="">
+        <img class="imgsan" src="img/aogiri_1.png" style="height: 150px" alt="">
+        <img class="imgsan" src="img/cross.png" style="height: 150px" alt="">
+        <img class="imgsan" src="img/yanagi_1.png" style="height: 150px" alt="">
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（任3張）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（必須）
+    </div>
+
+    <div id="san" class="tabcontent">
+        <h3>三光</h3>
+        <p>得到不包含「柳に小野道風」之外得到其餘4張光牌裡面的3張。</p>
+        <img class="imgyon" src="img/yurui_1.png" style="height: 150px" alt="">
+        <img class="imgyon" src="img/sakura_1.png" style="height: 150px" alt="">
+        <img class="imgyon" src="img/susuki_1.png" style="height: 150px" alt="">
+        <img class="imgyon" src="img/aogiri_1.png" style="height: 150px" alt="">
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（任3張）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div id="chyo" class="tabcontent">
+        <h3>豬鹿蝶</h3>
+        <p>得到「萩に猪」、「紅葉に鹿」、「牡丹に蝶」。</p>
+        <img class="imggo" src="img/hagi_1.png" style="height: 150px" alt="">
+        <img class="imggo" src="img/kaede_1.png" style="height: 150px" alt="">
+        <img class="imggo" src="img/botan_1.png" style="height: 150px" alt="">
+    </div>
+
+    <div id="redcard" class="tabcontent">
+        <h3>赤短</h3>
+        <p>得到「松に赤短」、「梅に赤短」、「桜に赤短」。此役別稱為「裏菅原」、「小三（こざん）」。</p>
+        <img class="imgroku" src="img/sakura_2.png" style="height: 150px" alt="">
+        <img class="imgroku" src="img/ume_2.png" style="height: 150px" alt="">
+        <img class="imgroku" src="img/yurui_2.png" style="height: 150px" alt="">
+    </div>
+
+    <div id="bluecard" class="tabcontent">
+        <h3>青短</h3>
+        <p>得到「牡丹に青短」、「菊に青短」、「紅葉に青短」。</p>
+        <img class="imgnana" src="img/botan_2.png" style="height: 150px" alt="">
+        <img class="imgnana" src="img/kaede_2.png" style="height: 150px" alt="">
+        <img class="imgnana" src="img/kiku_2.png" style="height: 150px" alt="">
+    </div>
+
+    <div id="tane" class="tabcontent">
+        <h3>種</h3>
+        <p>得到5張任意種牌。每多獲得一張種牌結算時點數加1。</p>
+        <img class="imgku" src="img/botan_1.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/fuji_1.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/hagi_1.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/kaede_1.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/kiku_1.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/shoubu_1.png" style="height: 150px" alt="">
+     
+        <img class="imgku" src="img/susuki_2.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/ume_1.png" style="height: 150px" alt="">
+        <img class="imgku" src="img/yanagi_2.png" style="height: 150px" alt="">
+      
+    </div>
+
+    <div id="shortc" class="tabcontent">
+        <h3>短</h3>
+        <p>得到5張短冊牌。每多獲得一張短冊牌結算時點數加1。</p>
+        <img class="imghachi" src="img/sakura_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/ume_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/yurui_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/botan_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/kaede_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/kiku_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/fuji_2.png" style="height: 150px" alt="">
+       
+
+        <img class="imghachi" src="img/hagi_2.png" style="height: 150px" alt="">
+        <img class="imghachi" src="img/shoubu_2.png" style="height: 150px" alt="">
+      
+    </div>
+
+    <div id="kasuc" class="tabcontent">
+        <h3>雜</h3>
+        <p>得到10張的雜牌。每多獲得一張雜牌結算時點數加1。</p>
+        <img class="imgjyu" src="img/aogiri_2.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/aogiri_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/aogiri_4.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/yanagi_4.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/botan_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/botan_4.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/fuji_3.png" style="height: 150px" alt="">
+        
+        <img class="imgjyu" src="img/fuji_4.png" style="height: 150px" alt="">
+
+
+        <img class="imgjyu" src="img/hagi_3.png" style="height: 150px" alt="">
+        <br>
+        <img class="imgjyu" src="img/hagi_4.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/kaede_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/kaede_4.png" style="height: 150px" alt="">
+
+        <img class="imgjyu" src="img/kiku_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/kiku_4.png" style="height: 150px" alt="">
+
+        <img class="imgjyu" src="img/sakura_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/sakura_4.png" style="height: 150px" alt="">
+
+        <img class="imgjyu" src="img/shoubu_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/shoubu_4.png" style="height: 150px" alt="">
+        <br>
+        <img class="imgjyu" src="img/susuki_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/susuki_4.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/ume_3.png" style="height: 150px" alt="">
+
+        <img class="imgjyu" src="img/ume_4.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/yurui_3.png" style="height: 150px" alt="">
+        <img class="imgjyu" src="img/yurui_4.png" style="height: 150px" alt="">
+      
+    </div>
+    <div id="moonwhite" class="tabcontent">
+        <h3>賞月一浮白</h3>
+        <p>得到「桜に幕」和「菊に盃」。此役很容易做出，多半不採用或僅使用於追加役（bonus）。</p>
+        <img class="imgjyuichi" src="img/kiku_1.png" style="height: 150px" alt="">
+        <img class="imgjyuichi" src="img/susuki_1.png" style="height: 150px" alt="">
+    </div>
+
+    <div id="hanawhite" class="tabcontent">
+        <h3>賞花一浮白</h3>
+        <p>得到「芒に月」和「菊に盃」。此役很容易做出，多半不採用或僅使用於追加役（bonus）。
+        </p>
+        <img class="imgjyuichi" src="img/kiku_1.png" style="height: 150px" alt="">
+        <img class="imgjyuichi" src="img/sakura_1.png" style="height: 150px" alt="">
+    </div>
+
+
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <script>
+        function cardintro(evt, setName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(setName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+
+</body>
+
+</html>
